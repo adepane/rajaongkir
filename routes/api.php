@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RajaOnkirController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,5 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/search/provinces', [RajaOnkirController::class, 'getProvinces']);
-Route::get('/search/cities', [RajaOnkirController::class, 'getCities']);
+Route::post('login', [AuthController::class, 'login']);
+Route::middleware('auth:sanctum')->get('/search/provinces', [RajaOnkirController::class, 'getProvinces']);
+Route::middleware('auth:sanctum')->get('/search/cities', [RajaOnkirController::class, 'getCities']);
