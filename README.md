@@ -1,20 +1,5 @@
 ## Instalation
 
-change the .env database to your's in section below
-```
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=dothiring
-DB_USERNAME=root
-DB_PASSWORD=
-```
-
-change the .env RAJA ONGKIR KEY in section below:
-```
-RAJA_ONGKIR_KEY=
-```
-
 clone this repo
 ```
 git clone https://github.com/adepane/rajaongkir.git "yourdirname"
@@ -44,10 +29,30 @@ To run it in the browser, you can use valet like `yourdirname.test`, or if you d
 php artisan serve
 ```
 
+## Preparing DB
+change the .env database to your's in section below
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=dothiring
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
 Migrate all Database
 ```
 php artisan migrate
 ```
+
+## Change Raja Onkri Key
+
+change the .env RAJA ONGKIR KEY in section below:
+```
+RAJA_ONGKIR_KEY=
+```
+
+## Fetch data from Raja Ongkir with command
 
 Fetch all Raja Ongkir Provinces to DB
 ```
@@ -59,13 +64,29 @@ Fetch all Raja Ongkir Cities to DB
 php artisan rajaogkir:city
 ```
 
+## Change request between Database or Direct to Raja Ongkir
+
 To swap between DB or Direct to Raja Ongkir change the .env in section below:
 ```
 # SWAPPABLE OPTION {db | direct}
 RAJA_ONGKIR_SWAPPABLE=db
 ```
-db = Get from database
-direct = Get from raja ongkir
+- db = Get from database
+- direct = Get from raja ongkir
+
+## User with command / Seeder
+
+Create new user with command (prompt will show up)
+```
+php artisan create:admin
+```
+
+Seeder user
+```
+php artisan db:seed
+```
+
+# Postman documentation
 
 Postman details API
 ```
