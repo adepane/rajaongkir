@@ -33,6 +33,6 @@ return [
     'rajaongkir' => [
         'key' => env('RAJA_ONGKIR_KEY'),
         'swappable' => env('RAJA_ONGKIR_SWAPPABLE'),
-    ]
+    ],
 
 ];
