@@ -45,7 +45,7 @@ Migrate all Database
 php artisan migrate
 ```
 
-## Change Raja Onkri Key
+## Change Raja Ongkir Key
 
 change the .env RAJA ONGKIR KEY in section below:
 ```
@@ -84,6 +84,13 @@ php artisan create:admin
 Seeder user
 ```
 php artisan db:seed
+```
+
+After seeder please using this credential below:
+
+```
+email: admin@gg.com
+password: admin123
 ```
 
 # Postman documentation
