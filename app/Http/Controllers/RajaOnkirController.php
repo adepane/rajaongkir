@@ -19,8 +19,9 @@ class RajaOnkirController extends Controller
     public function getProvinces(Request $request)
     {
         $provinceId = $request->id;
+        $swappable = $request->swap ?? $this->swappable;
 
-        switch ($this->swappable) {
+        switch ($swappable) {
             case 'direct':
                 $query = ! empty($provinceId) ? '?id='.$provinceId : '';
 
@@ -67,8 +68,9 @@ class RajaOnkirController extends Controller
     public function getCities(Request $request)
     {
         $cityId = $request->id;
+        $swappable = $request->swap ?? $this->swappable;
 
-        switch ($this->swappable) {
+        switch ($swappable) {
             case 'direct':
                 $query = ! empty($cityId) ? '?id='.$cityId : '';
 
