@@ -74,6 +74,18 @@ RAJA_ONGKIR_SWAPPABLE=db
 - db = Get from database
 - direct = Get from raja ongkir
 
+Swap also can request from HTTP Request with using url params (choose between 'db'
+or 'direct' without curly braces)
+
+```
+swap={db|direct}
+```
+
+Example
+```
+http://yourdirname.test/search/provinces?id=12&swap=db
+```
+
 ## User with command / Seeder
 
 Create new user with command (prompt will show up)
@@ -93,9 +105,10 @@ email: admin@gg.com
 password: admin123
 ```
 
-## Unit Test
+## Testing
 
-Postman details API
+Test is using RefreshDatabase so it will empty database
+
 ```
 php artisan test
 ```
