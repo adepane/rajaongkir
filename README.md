@@ -93,6 +93,14 @@ email: admin@gg.com
 password: admin123
 ```
 
+## Unit Test
+
+Postman details API
+```
+php artisan test
+```
+
+
 # Postman documentation
 
 Postman details API
