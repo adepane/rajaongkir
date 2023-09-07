@@ -29,5 +29,4 @@ class AuthTest extends TestCase
     {
         $this->assertTrue(true);
     }
-    
 }

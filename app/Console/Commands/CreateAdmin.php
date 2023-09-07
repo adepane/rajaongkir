@@ -30,11 +30,12 @@ class CreateAdmin extends Command
         if ($password != $confirmPassword) {
             $this->line('Your Password Not Match');
             $this->line('=======================');
+
             return $this->checkPass();
-        } 
+        }
 
         return $password;
-        
+
     }
 
     public function checkUser()
@@ -47,6 +48,7 @@ class CreateAdmin extends Command
         if ($validator->fails()) {
             $this->line('Email is not valid');
             $this->line('=======================');
+
             return $this->checkUser();
         }
 
@@ -54,9 +56,10 @@ class CreateAdmin extends Command
         if (count($getUser) > 0) {
             $this->line('Email already exists');
             $this->line('=======================');
+
             return $this->checkUser();
         }
-        
+
         return $user['email'];
     }
 
